@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Records</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <% if (records.length === 0) { %>
+    <p>No records found.</p>
+  <% } else { %>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+      <% records.forEach(function(record) { %>
+        <tr>
+          <td><%= record.title %></td>
+          <td><%= record.firstName %></td>
+          <td><%= record.lastName %></td>
+        </tr>
+      <% }); %>
+    </table>
+  <% } %>
+</body>
+</html>

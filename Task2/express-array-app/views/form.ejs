@@ -1,0 +1,23 @@
+<form action="/add" method="POST">
+    <h2 style="color: blue;">General Information</h2>
+  <p>
+    <label for="title">Title:</label>
+    <select id="title" name="title" required>
+      <option value="">-- Select Title --</option>
+      <option value="mr">Mr</option>
+      <option value="ms">Ms</option>
+      <option value="mrs">Mrs</option>
+      <option value="dr">Dr</option>
+      <option value="sir">Sir</option>
+    </select>
+</p><p>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+">
+  
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+">
+</p>
+    <button type="submit">Register Badge</button>
+  </form>
+  
+  
